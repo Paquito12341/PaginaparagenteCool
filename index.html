@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Programación del festival cultural Riu Viu de Villa Riu, 24 y 25 de octubre.">
+  <title>Riu Viu · Festival cultural de Villa Riu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#programacion">Saltar a la programación</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Riu Viu, inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M5 17c8-7 14 7 22 0s12 0 16 2M5 29c8-7 14 7 22 0s12 0 16 2"/></svg>
+        </span>
+        <span>Riu Viu</span>
+      </a>
+      <p class="council"><span>Ajuntament de</span> Villa Riu</p>
+    </div>
+    <nav class="filter-wrap" aria-label="Filtrar actividades">
+      <div class="filters" role="group" aria-label="Tipo de actividad">
+        <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">
+          <span aria-hidden="true">✦</span> Todos
+        </button>
+        <button class="filter" type="button" data-filter="concert" aria-pressed="false">
+          <span aria-hidden="true">♫</span> Conciertos
+        </button>
+        <button class="filter" type="button" data-filter="workshop" aria-pressed="false">
+          <span aria-hidden="true">✎</span> Talleres
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Festival cultural de Villa Riu</p>
+        <h1 id="hero-title">Dos días para disfrutar<br><em>la cultura juntos</em></h1>
+        <p class="hero-text">Música, creatividad e historias para todas las edades. Encuentra tu plan y ven a vivir el río.</p>
+        <ul class="hero-facts" aria-label="Datos principales del festival">
+          <li><span aria-hidden="true">▣</span><strong>24 y 25 de octubre</strong></li>
+          <li><span aria-hidden="true">✦</span><strong>6 actividades gratuitas</strong></li>
+        </ul>
+        <a class="primary-link" href="#programacion">Ver la programación <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art">
+        <img src="assets/riu-viu-familia.png" alt="Familia de varias generaciones disfrutando de música, cuentos, fotografía, pintura y cine junto al río">
+        <div class="event-card" aria-label="Información del evento">
+          <span class="event-card-label">Festival cultural</span>
+          <strong>Riu Viu</strong>
+          <span class="event-card-date">Sábado 24 y domingo 25</span>
+          <span class="event-card-meta">Octubre · Villa Riu</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="programme" id="programacion" aria-labelledby="programme-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Elige tu plan</p>
+          <h2 id="programme-title">Programación</h2>
+        </div>
+        <p id="filter-status" class="result-status" role="status" aria-live="polite">Mostrando todas las actividades</p>
+      </div>
+
+      <section class="day" aria-labelledby="saturday-title">
+        <div class="day-heading">
+          <time datetime="2026-10-24"><span>Sábado</span> <strong id="saturday-title">24 de octubre</strong></time>
+          <span class="activity-count" data-day-count="saturday">3 actividades</span>
+        </div>
+        <div class="card-grid">
+          <article class="activity-card" data-category="workshop" data-day="saturday">
+            <div class="time-block"><time datetime="2026-10-24T11:00">11:00</time><span>Inicio</span></div>
+            <div class="card-body">
+              <span class="type type-workshop">Taller</span>
+              <h3>Taller de fotografía con móvil</h3>
+              <p class="place"><span aria-hidden="true">●</span> Centre Cívic</p>
+              <ul class="facts" aria-label="Información principal">
+                <li>Desde 14 años</li><li>Plazas limitadas</li>
+              </ul>
+              <p class="registration"><span aria-hidden="true">✓</span> Requiere inscripción previa</p>
+              <div class="details-panel" id="details-photo" hidden>
+                <p>Aprende trucos sencillos para mejorar tus fotos con el móvil. Trae tu propio dispositivo.</p>
+                <a href="mailto:inscripcions@riuvivu.example">Inscribirme por correo</a>
+              </div>
+              <button class="details-button" type="button" aria-expanded="false" aria-controls="details-photo">Ver detalles <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+
+          <article class="activity-card family-card" data-category="family" data-day="saturday">
+            <div class="family-banner"><span aria-hidden="true">★</span> Recomendado para familias</div>
+            <div class="time-block"><time datetime="2026-10-24T12:30">12:30</time><span>Inicio</span></div>
+            <div class="card-body">
+              <span class="type type-family">Actividad familiar</span>
+              <h3>Cuentos en familia</h3>
+              <p class="place"><span aria-hidden="true">●</span> Biblioteca Municipal</p>
+              <ul class="facts" aria-label="Información principal"><li>Todas las edades</li><li>Entrada libre</li></ul>
+              <p class="registration no-registration"><span aria-hidden="true">○</span> Sin inscripción · hasta completar aforo</p>
+              <div class="details-panel" id="details-stories" hidden><p>Una sesión de cuentos para compartir entre pequeños y mayores. Acceso por orden de llegada.</p></div>
+              <button class="details-button" type="button" aria-expanded="false" aria-controls="details-stories">Ver detalles <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+
+          <article class="activity-card" data-category="concert" data-day="saturday">
+            <div class="time-block"><time datetime="2026-10-24T18:00">18:00</time><span>Inicio</span></div>
+            <div class="card-body">
+              <span class="type type-concert">Concierto</span>
+              <h3>Concierto de apertura</h3>
+              <p class="place"><span aria-hidden="true">●</span> Plaça Major</p>
+              <ul class="facts" aria-label="Información principal"><li>Música en directo</li><li>Entrada libre</li></ul>
+              <p class="registration no-registration"><span aria-hidden="true">○</span> No requiere inscripción</p>
+              <div class="details-panel" id="details-concert" hidden><p>El festival comienza con música en directo al aire libre en el corazón de Villa Riu.</p></div>
+              <button class="details-button" type="button" aria-expanded="false" aria-controls="details-concert">Ver detalles <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+        </div>
+        <p class="empty-message" data-empty="saturday" hidden>No hay actividades de este tipo el sábado.</p>
+      </section>
+
+      <section class="day" aria-labelledby="sunday-title">
+        <div class="day-heading">
+          <time datetime="2026-10-25"><span>Domingo</span> <strong id="sunday-title">25 de octubre</strong></time>
+          <span class="activity-count" data-day-count="sunday">3 actividades</span>
+        </div>
+        <div class="card-grid">
+          <article class="activity-card" data-category="art" data-day="sunday">
+            <div class="time-block"><time datetime="2026-10-25T10:30">10:30</time><span>Inicio</span></div>
+            <div class="card-body">
+              <span class="type type-art">Arte participativo</span><h3>Mural colectivo</h3>
+              <p class="place"><span aria-hidden="true">●</span> Parc del Riu</p>
+              <ul class="facts" aria-label="Información principal"><li>Participación abierta</li><li>Material incluido</li></ul>
+              <p class="registration no-registration"><span aria-hidden="true">○</span> No requiere inscripción</p>
+              <div class="details-panel" id="details-mural" hidden><p>Ayúdanos a crear una obra colectiva junto al río. No hace falta experiencia.</p></div>
+              <button class="details-button" type="button" aria-expanded="false" aria-controls="details-mural">Ver detalles <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+          <article class="activity-card" data-category="workshop" data-day="sunday">
+            <div class="time-block"><time datetime="2026-10-25T16:00">16:00</time><span>Inicio</span></div>
+            <div class="card-body">
+              <span class="type type-workshop">Taller</span><h3>Taller de creación musical</h3>
+              <p class="place"><span aria-hidden="true">●</span> Centre Cívic</p>
+              <ul class="facts" aria-label="Información principal"><li>Desde 12 años</li><li>Plazas limitadas</li></ul>
+              <p class="registration"><span aria-hidden="true">✓</span> Requiere inscripción previa</p>
+              <div class="details-panel" id="details-music" hidden><p>Experimenta con ritmos y sonidos en una actividad práctica. No necesitas traer instrumento.</p><a href="mailto:inscripcions@riuvivu.example">Inscribirme por correo</a></div>
+              <button class="details-button" type="button" aria-expanded="false" aria-controls="details-music">Ver detalles <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+          <article class="activity-card" data-category="cinema" data-day="sunday">
+            <div class="time-block"><time datetime="2026-10-25T20:00">20:00</time><span>Inicio</span></div>
+            <div class="card-body">
+              <span class="type type-cinema">Cine</span><h3>Cine al aire libre</h3>
+              <p class="place"><span aria-hidden="true">●</span> Plaça Major</p>
+              <ul class="facts" aria-label="Información principal"><li>Proyección gratuita</li><li>Llega con antelación</li></ul>
+              <p class="registration no-registration"><span aria-hidden="true">○</span> No requiere inscripción</p>
+              <div class="details-panel" id="details-cinema" hidden><p>Proyección gratuita bajo las estrellas. Recomendamos llegar pronto para escoger sitio.</p></div>
+              <button class="details-button" type="button" aria-expanded="false" aria-controls="details-cinema">Ver detalles <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+        </div>
+        <p class="empty-message" data-empty="sunday" hidden>No hay actividades de este tipo el domingo.</p>
+      </section>
+    </section>
+
+    <section class="practical" aria-labelledby="practical-title">
+      <div class="practical-intro"><p class="eyebrow">Antes de venir</p><h2 id="practical-title">Información práctica</h2><p>Todo lo necesario para disfrutar del festival con tranquilidad.</p></div>
+      <div class="practical-grid">
+        <article><span class="info-icon" aria-hidden="true">€</span><div><h3>Festival gratuito</h3><p>Todas las actividades son gratuitas. Solo algunas necesitan inscripción previa.</p></div></article>
+        <article><span class="info-icon" aria-hidden="true">▣</span><div><h3>24 y 25 de octubre</h3><p>Dos días de cultura para jóvenes, adultos y familias.</p></div></article>
+        <article><span class="info-icon" aria-hidden="true">☂</span><div><h3>Si llueve</h3><p>Las actividades al aire libre pueden cambiar de lugar. Lo anunciaremos en esta página.</p></div></article>
+      </div>
+      <div class="contact-note"><strong>¿Necesitas inscribirte?</strong><span>Escribe a <a href="mailto:inscripcions@riuvivu.example">inscripcions@riuvivu.example</a></span></div>
+    </section>
+  </main>
+
+  <footer><div><span class="footer-brand">Riu Viu</span><p>Un festival del Ayuntamiento de Villa Riu</p></div><a href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
